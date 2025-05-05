@@ -1,0 +1,10 @@
+{
+    "HomePage": {
+        "title": "Hello world!"
+    },
+    "email_invalid": "email_invalid",
+    "password_invalid": "password_invalid",
+    "email_required": "email_required",
+    "password_required": "password_required",
+    "login": "login"
+}

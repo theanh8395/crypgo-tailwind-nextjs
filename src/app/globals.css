@@ -1,0 +1,71 @@
+@import "tailwindcss";
+@plugin '../hero.ts';
+@source '../../node_modules/@heroui/theme/dist/**/*.{js,ts,jsx,tsx}';
+@custom-variant dark (&:is(.dark *));
+
+@theme {
+  --spacing-8xl: 75rem;
+
+  --color-darkmode: #000510;
+  --color-primary: #99e39e;
+  --color-muted: #d8dbdb;
+  --color-tealGreen: #477e70;
+  --color-charcoalGray: #666c78;
+
+  --text-24: 1.5rem;
+  --text-24--line-height: 2rem;
+  --text-28: 1.75rem;
+  --text-28--line-height: 2.25rem;
+  --text-30: 1.875rem;
+  --text-30--line-height: 2.25rem;
+  --text-36: 2.25rem;
+  --text-36--line-height: 2.625rem;
+  --text-40: 2.5rem;
+  --text-40--line-height: 3rem;
+  --text-54: 3.375rem;
+  --text-54--line-height: 1.2;
+  --text-70: 4.375rem;
+  --text-70--line-height: 1.2;
+  --text-76: 4.75rem;
+  --text-76--line-height: 1.2;
+
+  --blur-400: 400px;
+}
+
+@layer base {
+
+  *,
+  ::after,
+  ::before,
+  ::backdrop,
+  ::file-selector-button {
+    border-color: var(--color-gray-200, currentColor);
+  }
+}
+
+@layer utilities {
+  .container {
+    @apply w-full max-w-8xl mx-auto;
+  }
+
+  .absoluteImage {
+    @apply absolute !top-1/2 !left-1/2 transform -translate-x-1/2 -translate-y-1/2;
+  }
+
+  .absoluteImageBg {
+    @apply absolute !top-1/2 !left-1/2 !transform -translate-x-1/2 !-translate-y-1/2 w-full h-full !object-cover;
+  }
+
+  .absoluteContainImage {
+    @apply absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-full h-full object-contain;
+  }
+
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+section {
+  @apply bg-darkmode;
+}
